@@ -1,0 +1,15 @@
+<div class="container">
+<div ng-class="{'header-fullscreen': fullscreen, 'header-non-fullscreen': !fullscreen}">
+		<h1 ng-if="!fullscreen">Welcome to ng-edit !</h1>
+	</div>
+	
+	<ng-include src="'views/toolbar.html'" ng-controller="toolBarCtrl"></ng-include>
+
+	<div ng-class="{'panels-container': true, 'panels-container-fullscreen': fullscreen, 'panels-container-non-fullscreen': !fullscreen}">
+		<ng-include src="'views/edit-panel.html'" ng-controller="editPanelCtrl"></ng-include>
+		<ng-include src="'views/preview-panel.html'" ng-controller="previewPanelCtrl"></ng-include>
+
+	</div>
+	
+
+</div>
